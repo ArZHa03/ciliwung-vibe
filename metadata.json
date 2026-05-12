@@ -1,0 +1,10 @@
+{
+  "name": "CiliwungVibe: Smart Eco-Guardian",
+  "description": "AI-powered river clean-up app with Vision AI, Circular Economy Hub, and Voice Assistant. Designed for Ciliwung River #JuaraVibeCoding 2026.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

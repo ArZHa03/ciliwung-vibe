@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Outfit:wght@400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-neon-cyan: var(--neon-cyan);
+  --color-eco-green: var(--eco-green);
+  --color-moss-green: var(--eco-green);
+  --color-moss-dark: var(--bg-dark);
+  --color-moss-deep: var(--bg-deep);
+  --color-glass-base: var(--glass-base);
+  --color-glass-border: var(--glass-border);
+  --color-dark-bg: var(--bg-dark);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root, [data-theme="default"] {
+  --neon-cyan: #00F2FF;
+  --eco-green: #4ADE80;
+  --bg-dark: #0F1A14;
+  --bg-deep: #1A2F23;
+  --glass-base: rgba(26, 47, 35, 0.6);
+  --glass-border: rgba(0, 242, 255, 0.2);
+}
+
+[data-theme="sunset"] {
+  --neon-cyan: #FFB347;
+  --eco-green: #FFD700;
+  --bg-dark: #1A0D00;
+  --bg-deep: #2A1700;
+  --glass-base: rgba(42, 23, 0, 0.6);
+  --glass-border: rgba(255, 179, 71, 0.2);
+}
+
+[data-theme="cyberpunk"] {
+  --neon-cyan: #FF00FF;
+  --eco-green: #00FFFF;
+  --bg-dark: #100010;
+  --bg-deep: #200020;
+  --glass-base: rgba(32, 0, 32, 0.6);
+  --glass-border: rgba(255, 0, 255, 0.2);
+}
+
+[data-theme="ocean"] {
+  --neon-cyan: #00FFFF;
+  --eco-green: #0088FF;
+  --bg-dark: #00101A;
+  --bg-deep: #001C2F;
+  --glass-base: rgba(0, 28, 47, 0.6);
+  --glass-border: rgba(0, 255, 255, 0.2);
+}
+
+body {
+  @apply bg-moss-dark text-[#E0E7E1] font-sans antialiased selection:bg-neon-cyan selection:text-moss-dark;
+}
+
+.glass-panel {
+  @apply bg-glass-base backdrop-blur-xl border border-glass-border shadow-2xl;
+  border-radius: 16px;
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5);
+}
+
+.neon-border {
+  border: 1px solid var(--color-neon-cyan);
+  box-shadow: 0 0 8px rgba(0, 242, 255, 0.3);
+}
+
+.neon-text-green {
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.stat-value {
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: -1px;
+}
+
